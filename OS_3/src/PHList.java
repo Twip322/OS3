@@ -3,6 +3,10 @@ public class PHList {
     private Boolean free=true;
     private int size;
 
+    /**
+     * PHList конструктор, создающий объект страницы виртуальной памяти
+     * @param pageSIZE размерность страницы
+     */
     public PHList(Integer pageSIZE)
     {
         data="";

@@ -2,12 +2,17 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class MemoryManager {
+
     PhysicalMemory PhysicalMemory;
     ArrayList<VirtualMemory> virtual_memories=new ArrayList<VirtualMemory>();
     ArrayList<PHList> phLists=new ArrayList<PHList>();
     Random random=new Random();
 
-
+    /**
+     * MemoryManager занимает свободный страницы Листа PHList
+     *
+     * @param PhysicalMemory Объект от класса {@link PhysicalMemory}
+     */
     public MemoryManager(PhysicalMemory PhysicalMemory)
     {
         this.PhysicalMemory = PhysicalMemory;
@@ -20,6 +25,9 @@ public class MemoryManager {
         }
     }
 
+    /**
+     * work является абстракцией работы алгоритма часов для Виртуальной памяти.
+     */
     public void work() {
         int runtime=0;
         while (runtime==3000)
@@ -37,6 +45,11 @@ public class MemoryManager {
             runtime++;
         }
     }
+
+    /**
+     * outLoad метод выгрузки страниц
+     * @param virtual_memory объект от класса {@link VirtualMemory}
+     */
     private void outLoad(VirtualMemory virtual_memory)
     {
         phLists.add(virtual_memory.getPhList());

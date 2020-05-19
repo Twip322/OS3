@@ -1,6 +1,8 @@
 import java.lang.management.ManagementFactory;
 
 public class Main {
+
+
     public static void main(String[] args)
     {
         Integer RAM=1024;

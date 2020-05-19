@@ -2,6 +2,10 @@ public class VirtualMemory {
     PHList phList;
     Boolean inwork=true;
 
+    /**
+     * VirtualMemory создаёт объект класса {@link VirtualMemory} для работы со страницами ВП.
+     * @param phList Лист страниц.
+     */
     public VirtualMemory(PHList phList)
     {
         this.phList=phList;
